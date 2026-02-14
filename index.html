@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For My Love ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<video autoplay muted loop id="bgVideo">
+  <source src="your-video.mp4" type="video/mp4">
+</video>
+
+<!-- LOCK -->
+<div id="lockScreen">
+  <h2>Private For My Queen 👑</h2>
+  <input type="password" id="password" placeholder=" Your secret name for him">
+  <button onclick="checkPassword()">Unlock 💖</button>
+</div>
+
+<!-- MAIN -->
+<div id="mainContent" style="display:none;">
+
+  <h1>Happy Valentine’s Day <span id="herName"></span> 💖</h1>
+  <div id="countdown"></div>
+
+  <button onclick="startSurprise()">Open Your Gift 🎁</button>
+
+  <!-- Love Letter -->
+  <div id="loveLetter" class="card hidden">
+    <h3>My Love Letter 💕</h3>
+    <p id="typedText"></p>
+  </div>
+
+  <!-- Slideshow -->
+  <div id="slideshow" class="card hidden">
+    <div class="slides">
+      <img src="photo1.jpg" class="active">
+      <img src="photo2.jpg">
+      <img src="photo3.jpg">
+    </div>
+  </div>
+
+  <!-- Proposal -->
+  <div id="proposal" class="card hidden">
+    <h3>Will You Be Mine Forever, <span id="herName2"></span>? 💍</h3>
+    <button id="yesBtn" onclick="sayYes()">YES ❤️</button>
+    <button id="noBtn">No 😢</button>
+  </div>
+
+  <!-- Voice -->
+  <div id="voiceSection" class="card hidden">
+    <h3>Leave Me a Voice Message 🎤</h3>
+    <button onclick="startRecording()">Start</button>
+    <button onclick="stopRecording()">Stop</button>
+    <audio id="audioPlayback" controls></audio>
+  </div>
+
+  <!-- Chat -->
+  <div id="chatSection" class="card hidden">
+    <h3>Love Chat 💬</h3>
+    <div id="chatBox"></div>
+    <input type="text" id="chatInput" placeholder="Say something sweet...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <div id="finalScreen" class="card hidden">
+    <h2>She Said YES 💍✨</h2>
+    <p>Built with love by Albert Kyei ❤️</p>
+  </div>
+
+</div>
+
+<!-- Confetti container -->
+<div id="confettiContainer"></div>
+<canvas id="fireworks"></canvas>
+
+<audio id="music" src="music.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
